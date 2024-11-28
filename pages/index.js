@@ -28,12 +28,15 @@ export async function getStaticProps() {
 	};
 
 	const storyblokApi = getStoryblokApi();
-	let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+	let { data: mainPageData } = await storyblokApi.get(
+		`cdn/stories/${slug}`,
+		sbParams
+	);
 
 	return {
 		props: {
-			story: data ? data.story : false,
-			key: data ? data.story.id : false,
+			story: mainPageData ? mainPageData.story : false,
+			key: mainPageData ? mainPageData.story.id : false,
 		},
 		revalidate: 3600,
 	};
