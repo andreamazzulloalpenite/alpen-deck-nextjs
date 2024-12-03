@@ -6,6 +6,7 @@ import Page from "../components/Page";
 import Teaser from "../components/Teaser";
 import Copertina from "../components/Copertina";
 import Agenda from "../components/Agenda";
+import TextImage from "../components/TextImage";
 
 const components = {
 	feature: Feature,
@@ -14,6 +15,7 @@ const components = {
 	page: Page,
 	copertina: Copertina,
 	Agenda: Agenda,
+	textImage: TextImage,
 };
 
 storyblokInit({

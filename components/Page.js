@@ -6,7 +6,6 @@ import "swiper/css/navigation"; // Per pulsanti opzionali
 import "swiper/css/pagination"; // Per il controllo visivo
 
 const Page = ({ blok }) => {
-	console.log("page", blok);
 	return (
 		<main className="h-screen overflow-hidden">
 			<Swiper
