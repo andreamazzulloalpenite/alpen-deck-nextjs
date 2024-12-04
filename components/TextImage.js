@@ -23,7 +23,7 @@ const RenderImg = ({ imageSrc, alt }) => (
 
 const TextImage = ({ blok }) => (
 	<div
-		className="copertina bg-cover bg-center bg-no-repeat w-full h-screen"
+		className="textImage bg-cover bg-center bg-no-repeat w-full h-screen"
 		style={{
 			backgroundImage: blok.background?.filename
 				? `url(${blok.background.filename})`

@@ -20,11 +20,14 @@ const Page = ({ blok }) => {
 				snapOnRelease={true} // Lo snap si attiva quando la gesture di scroll è completata
 				className="mySwiper h-full" // Impostato per occupare tutta l'altezza disponibile
 			>
-				{blok.body.map((nestedBlok) => (
-					<SwiperSlide key={nestedBlok._uid} className="h-screen">
-						<StoryblokComponent blok={nestedBlok} />
-					</SwiperSlide>
-				))}
+				{blok.body.map((nestedBlok) => {
+					// console.log("page", nestedBlok);
+					return (
+						<SwiperSlide key={nestedBlok._uid} className="h-screen">
+							<StoryblokComponent blok={nestedBlok} />
+						</SwiperSlide>
+					);
+				})}
 			</Swiper>
 		</main>
 	);
